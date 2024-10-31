@@ -363,7 +363,7 @@ Response:
   }
   ```
 
-### Update Book
+### 9. Update Book
 
 Updates the title of an existing book in the library database. This endpoint ensures that the new title doesn’t duplicate another book by the same author.
 
@@ -421,8 +421,49 @@ Response:
   }
   ```
 
+### 10. Delete Book
 
-#### This API implements security and reliability measures, including:
+Deletes a book from the library catalog. It removes the book’s references from linked tables before deleting the entry.
+
+- **Endpoint:** `/user/book/delete`
+- **Method:** `DELETE`
+- **Request Body:**
+  ```json
+  {
+    "bookid": "Book ID",
+    "token": "valid_jwt_token"
+  }
+
+  Response:
+
+- Success
+  ```json
+  {
+    "status": "success",
+    "token": "new_jwt_token"
+    "data": null
+  }
+  ```
+- Fail
+  ```json
+  {
+    "status": "fail",
+    "data": {
+      "title": "Invalid Token"
+    }
+  }
+  ```
+  ```json
+  {
+    "status": "fail",
+    "data": {
+      "title": "Book does not exist"
+    }
+  }
+  ```
+
+
+#### These API implements security and reliability measures, including:
 
 - **Token Refreshing:** Tokens are refreshed with each request, mitigating the risk of session hijacking.
 - **Error Handling:** Detailed error messages are returned in case of database errors or validation failures, aiding both users and developers in understanding the issues.
