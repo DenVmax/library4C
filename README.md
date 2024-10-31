@@ -177,6 +177,55 @@ Response:
   }
   ```
 
+## Update Author
+
+Updates an author's details by authorid. Requires a valid token.
+
+- **Endpoint:** `/user/author/update`
+- **Method:** `PUT`
+- **Request Body:**
+  ```json
+  {
+    "authorid": 1,
+    "name": "Updated Author Name",
+    "token": "valid_token"
+  }
+
+Response:
+
+- Success
+  ```json
+  {
+    "status": "success",
+    "token": "new_jwt_token"
+    "data": null
+  }
+  ```
+- Fail
+  ```json
+  {
+    "status": "fail",
+    "data": {
+      "title": "Invalid Token"
+    }
+  }
+  ```
+  ```json
+  {
+    "status": "fail",
+    "data": {
+      "title": "Author already exists"
+    }
+  }
+  ```
+  ```json
+  {
+    "status": "fail",
+    "data": {
+      "title": "Author name cannot be blank"
+    }
+  }
+  ```
 
 
 
