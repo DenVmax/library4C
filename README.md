@@ -1,6 +1,6 @@
 # Library System API
 
-This PHP-based RESTful API provides CRUD (Create, Read, Update, Delete) operations for managing books and authors in a library system. It is built using the Slim Framework and follows standard RESTful principles, making it compatible with a wide range of client applications. By leveraging JWT-based authentication, this API ensures secure access to its endpoints, allowing only authorized users to manage the library’s catalog of books and authors.
+PHP-based RESTful API provides CRUD (Create, Read, Update, Delete) operations for managing books and authors in a library system. It is built using the Slim Framework and follows standard RESTful principles, making it compatible with a wide range of client applications. By leveraging JWT-based authentication, this API ensures secure access to its endpoints, allowing only authorized users to manage the library’s catalog of books and authors.
 
 ## API Features
 
