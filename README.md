@@ -142,6 +142,40 @@ Response:
   }
   ```
 
+## Read Authors
+
+Retrieves a list of authors. Requires a valid token in the Authorization header.
+
+- **Endpoint:** `/user/author/read`
+- **Method:** `GET`
+- **Headers:**
+  ```plaintext
+  Authorization: Token valid_token
+
+Response:
+
+- Success
+  ```json
+  {
+    "status": "success",
+    "token": "new_jwt_token"
+    "data": [
+      {
+        "authorid": 1,
+        "name": "Denver Umbay"
+      }
+    ]
+  }
+  ```
+- Fail
+  ```json
+  {
+    "status": "fail",
+    "data": {
+      "title": "Invalid Token"
+            }
+  }
+  ```
 
 
 
