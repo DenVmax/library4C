@@ -6,6 +6,15 @@ PHP-based RESTful API provides CRUD (Create, Read, Update, Delete) operations fo
 
 **Secure Token-Based Authentication:** Each request is authenticated with a JSON Web Token (JWT), ensuring only authorized users can perform operations. Tokens are validated with each request and refreshed as necessary for session continuity.
 
+- **User Registration and Authentication**: Allows users to register and log in securely. Each request is authenticated with a JSON Web Token (JWT), which is validated with each request and refreshed as needed to maintain session continuity.
+  
+- **CRUD Operations for Authors**:
+  - **Create Author**: Adds a new author to the catalog.
+  - **Read Authors**: Retrieves a list of all authors, enabling clients to display and filter the author list.
+  - **Update Author**: Allows modification of an author’s name.
+  - **Delete Author**: Removes an author, first deleting any associated books to maintain referential integrity.
+  
+
 **CRUD Operations for Books:**
 
 - **Create Book:** Adds a new book to the catalog, checking for duplicate titles by the same author.
@@ -15,24 +24,9 @@ PHP-based RESTful API provides CRUD (Create, Read, Update, Delete) operations fo
 
 **Retrieve Authors and Their Books:** This endpoint lists all authors in the database along with the titles of their books, providing a structured response suitable for both displaying and filtering books by author.
 
-## Endpoint Descriptions and Workflow
+## Endpoints
 
-**POST /user/book/create**
-This endpoint allows users to create a new book entry in the library’s database. The request requires the book title, the author ID, and a valid JWT token. Before adding the book, it checks if an entry with the same title and author ID already exists to prevent duplicates.
-
-**GET /user/book/read**
-This endpoint retrieves a list of all books in the library. A valid JWT token must be provided. The response includes a refreshed token for session management and a list of books with basic details like title and author ID.
-
-**PUT /user/book/update**
-To update a book’s title, clients can use this endpoint by providing the book ID, new title, and a valid token. The API validates that the new title does not duplicate another entry by the same author and updates the book’s title in the database.
-
-**DELETE /user/book/delete**
-Users can delete a specific book by providing its book ID and a valid token. Before deletion, the API ensures all references in the books_authors table are removed to avoid foreign key constraint violations.
-
-**GET /author_books**
-This endpoint lists all authors and their books, grouped under each author’s entry. It provides an easy way to access an author’s catalog and is suitable for applications requiring hierarchical data presentation.
-
-## Security and Error Handling
+...
 
 This API implements security and reliability measures, including:
 
