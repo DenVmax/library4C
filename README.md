@@ -462,6 +462,56 @@ Response:
   }
   ```
 
+### 11. Retrieve Authors and Their Books
+
+Retrieves a list of authors and the titles of books they have authored.
+
+- **Endpoint:** `/author_books`
+- **Method:** `GET`
+- **Headers:**
+  ```plaintext
+  Authorization:     Token eyP0pXLsOiJ....(valid_jwt_token)
+
+Response:
+
+- Success
+  ```json
+  {
+    "status": "success",
+    "token": "new_jwt_token"
+    "data": [
+      {
+        "authorid": 1,
+        "author": "Denver Umbay",
+        "title": "Soldier, Poet, King",
+        "books": [
+        {
+          "bookid": 21,
+          "book_title": "Soldier, Poet, King"
+        },
+        {
+          "bookid": 30,
+          "book_title": "No Sacrifice, No Victory"
+        }
+        ]
+      }
+    ]
+  }
+  ```
+- Fail
+  ```json
+  {
+    "status": "fail",
+    "data": {
+      "title": "Invalid Token"
+    }
+  }
+  ```
+
+
+
+
+
 
 #### These API implements security and reliability measures, including:
 
