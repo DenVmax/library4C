@@ -68,7 +68,7 @@ Response:
 
 
 
-This API implements security and reliability measures, including:
+#### This API implements security and reliability measures, including:
 
 - **Token Refreshing:** Tokens are refreshed with each request, mitigating the risk of session hijacking.
 - **Error Handling:** Detailed error messages are returned in case of database errors or validation failures, aiding both users and developers in understanding the issues.
