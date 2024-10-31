@@ -54,7 +54,7 @@ Response:
     "status": "fail",
     "data": {
       "title": "Username already taken"
-            }
+    }
   }
   ```
 
@@ -87,7 +87,7 @@ Response:
     "status": "fail",
     "data": {
       "title": "Authentication Failed"
-            }
+    }
   }
   ```
 
@@ -122,7 +122,7 @@ Response:
     "status": "fail",
     "data": {
       "title": "Invalid Token"
-            }
+    }
   }
   ```
   ```json
@@ -130,7 +130,7 @@ Response:
     "status": "fail",
     "data": {
       "title": "Author already exists"
-            }
+    }
   }
   ```
   ```json
@@ -138,7 +138,7 @@ Response:
     "status": "fail",
     "data": {
       "title": "Author name cannot be blank"
-            }
+    }
   }
   ```
 
@@ -173,7 +173,7 @@ Response:
     "status": "fail",
     "data": {
       "title": "Invalid Token"
-            }
+    }
   }
   ```
 
