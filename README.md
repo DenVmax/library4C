@@ -33,28 +33,28 @@ Registers a new user by providing a username and password.
 - **Endpoint:** `/user/register`
 - **Method:** `POST`
 - **Request Body:**
-  ```json
+  ``
   {
     "username": "new_user",
     "password": "user_password"
-  }
+  }``
   
 Message Response
 Success:
-  ```json
-  {
+  ``{
     "status": "success",
     "data": null
-  }
+  }``
 Failure:
-  ```{
+  ``{
     "status": "fail",
     "data": {
       "title": "Username already taken"
     }
-  }
+  }``
 
 
+``Use `code` in your Markdown file.``	
 
 This API implements security and reliability measures, including:
 
