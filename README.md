@@ -515,6 +515,6 @@ Response:
 
 #### These API implements security and reliability measures, including:
 
-- **Token Refreshing:** Tokens are refreshed with each request, mitigating the risk of session hijacking.
-- **Error Handling:** Detailed error messages are returned in case of database errors or validation failures, aiding both users and developers in understanding the issues.
-- **Referential Integrity:** Careful handling of related entries (e.g., books and authors) ensures that deletions maintain database integrity by clearing linked references before proceeding.
+- Tokens are refreshed with each request.
+- Detailed error messages are returned in case of database errors or validation failures.
+- Careful handling of related entries (e.g., books and authors) ensures that deletions maintain database integrity by clearing linked references before proceeding.
