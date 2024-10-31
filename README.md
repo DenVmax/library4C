@@ -48,7 +48,7 @@ Response:
     "data": null
   }
   ```
-- Failure
+- Fail
   ```json
   {
     "status": "fail",
@@ -81,7 +81,7 @@ Response:
     "data": null
   }
   ```
-- Failure
+- Fail
   ```json
   {
     "status": "fail",
@@ -116,7 +116,7 @@ Response:
     "data": null
   }
   ```
-- Failure
+- Fail
   ```json
   {
     "status": "fail",
