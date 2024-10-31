@@ -26,7 +26,7 @@ PHP-based RESTful API provides CRUD (Create, Read, Update, Delete) operations fo
 
 ## Endpoints
 
-# User Registration
+**User Registration**
 
 Registers a new user by providing a username and password.
 
@@ -39,10 +39,12 @@ Registers a new user by providing a username and password.
     "password": "user_password"
   }
 Response:
+  Success: {"status": "success", "data": null}
+  Failure: {"status": "fail", "data": {"title": "Username already taken"}}
 
-Success: {"status": "success", "data": null}
 
-Failure: {"status": "fail", "data": {"title": "Username already taken"}}
+
+
 This API implements security and reliability measures, including:
 
 - **Token Refreshing:** Tokens are refreshed with each request, mitigating the risk of session hijacking.
