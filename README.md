@@ -24,9 +24,9 @@ PHP-based RESTful API provides CRUD (Create, Read, Update, Delete) operations fo
 
 **Retrieve Authors and Their Books:** This endpoint lists all authors in the database along with the titles of their books, providing a structured response suitable for both displaying and filtering books by author.
 
-# Endpoints
+## Endpoints
 
-## User Registration
+### User Registration
 
 Registers a new user by providing a username and password.
 
@@ -39,14 +39,18 @@ Registers a new user by providing a username and password.
     "password": "user_password"
   }
   
-Response
-    ```json 
+Message Response
+Success:
   {
-  Success: {"status": "success", "data": null}
+    "status": "success",
+    "data": null
   }
-
+Failure:
   {
-  Failure: {"status": "fail", "data": {"title": "Username already taken"}}
+    "status": "fail",
+    "data": {
+      "title": "Username already taken"
+    }
   }
 
 
