@@ -518,3 +518,11 @@ Response:
 - Tokens are refreshed with each request.
 - Detailed error messages are returned in case of database errors or validation failures.
 - Careful handling of related entries (e.g., books and authors) ensures that deletions maintain database integrity by clearing linked references before proceeding.
+
+
+
+
+
+
+
+
