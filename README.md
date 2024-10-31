@@ -38,7 +38,9 @@ Registers a new user by providing a username and password.
     "username": "new_user",
     "password": "user_password"
   }
-Response:
+  
+Response
+    ```json 
   {
   Success: {"status": "success", "data": null}
   }
