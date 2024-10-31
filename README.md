@@ -41,13 +41,13 @@ Registers a new user by providing a username and password.
   
 Response
 
-  Success
-      ```json
-            {
-              "status": "success",
-              "data": null
-            }
-      ```
+Success
+  ```json
+  {
+    "status": "success",
+    "data": null
+  }
+  ```
   Failure
       ```json
             {
