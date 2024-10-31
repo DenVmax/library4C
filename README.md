@@ -26,7 +26,7 @@ PHP-based RESTful API provides CRUD (Create, Read, Update, Delete) operations fo
 
 # Endpoints
 
-## User Registration
+## 1. User Registration
 
 Registers a new user by providing a username and password.
 
@@ -58,7 +58,7 @@ Response:
   }
   ```
 
-## User Authentication
+## 2. User Authentication
 
 Authenticates a user and generates a JWT.
 
@@ -93,7 +93,7 @@ Response:
 
 ## Endpoints for Author Management
 
-### Create Author
+### 3. Create Author
 
 Creates a new author entry. Requires a valid one-time-use token.
 
