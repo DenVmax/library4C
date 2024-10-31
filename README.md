@@ -41,12 +41,13 @@ Registers a new user by providing a username and password.
   
 Message Response
 Success:
+  ```json
   {
     "status": "success",
     "data": null
   }
 Failure:
-  {
+  ```{
     "status": "fail",
     "data": {
       "title": "Username already taken"
