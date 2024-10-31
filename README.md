@@ -268,7 +268,7 @@ Response:
   }
   ```
 
-## Endpoints for Author Management
+## Endpoints for Book Management
 
 ### 7. Create Book
 
@@ -327,9 +327,9 @@ Response:
     }
   }
   ```
-## Read Books
+### 8. Read Books
 
-Retrieves a list of all books in the library.
+Retrieves a list of all books in the library database.
 
 - **Endpoint:** `/user/book/read`
 - **Method:** `GET`
@@ -363,6 +363,63 @@ Response:
   }
   ```
 
+### Update Book
+
+Updates the title of an existing book in the library database. This endpoint ensures that the new title doesn’t duplicate another book by the same author.
+
+- **Endpoint:** `/user/book/update`
+- **Method:** `PUT`
+- **Request Body:**
+  ```json
+  {
+    "bookid": "Book ID",
+    "title": "New Title",
+    "token": "valid_jwt_token"
+  }
+
+  Response:
+
+- Success
+  ```json
+  {
+    "status": "success",
+    "token": "new_jwt_token"
+    "data": null
+  }
+  ```
+- Fail
+  ```json
+  {
+    "status": "fail",
+    "data": {
+      "title": "Invalid Token"
+    }
+  }
+  ```
+  ```json
+  {
+    "status": "fail",
+    "data": {
+      "title": "Book title cannot be blank"
+    }
+  }
+  ```
+  ```json
+  {
+    "status": "fail",
+    "data": {
+      "title": "Book not found"
+    }
+  }
+  ```
+  ```json
+  {
+    "status": "fail",
+    "data": {
+      "title": "This book by the same author already exists"
+    }
+  }
+  ```
 
 
 #### This API implements security and reliability measures, including:
