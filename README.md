@@ -377,7 +377,7 @@ Updates the title of an existing book in the library database. This endpoint ens
     "token": "valid_jwt_token"
   }
 
-  Response:
+Response:
 
 - Success
   ```json
