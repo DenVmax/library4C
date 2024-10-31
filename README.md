@@ -9,18 +9,18 @@ PHP-based RESTful API provides CRUD (Create, Read, Update, Delete) operations fo
 **User Registration and Authentication**: Allows users to register and log in securely. Each request is authenticated with a JSON Web Token (JWT), which is validated with each request and refreshed as needed to maintain session continuity.
   
 **CRUD Operations for Authors**:
-  - **Create Author**: Adds a new author to the catalog.
-  - **Read Authors**: Retrieves a list of all authors, enabling clients to display and filter the author list.
+  - **Create Author**: Adds a new author to the database.
+  - **Read Authors**: Retrieves a list of all authors.
   - **Update Author**: Allows modification of an author’s name.
   - **Delete Author**: Removes an author, first deleting any associated books to maintain referential integrity.
   
 
 **CRUD Operations for Books:**
 
-- **Create Book:** Adds a new book to the catalog, checking for duplicate titles by the same author.
-- **Read Books:** Retrieves the list of all books in the catalog, allowing clients to display the library’s collection.
+- **Create Book:** Adds a new book to the database, checking for duplicate titles by the same author.
+- **Read Books:** Retrieves the list of all books in the database.
 - **Update Book:** Modifies the title of an existing book, with validations to prevent duplicate entries by the same author.
-- **Delete Book:** Removes a book from the catalog, first deleting any references to maintain referential integrity.
+- **Delete Book:** Removes a book from the database, first deleting any references to maintain referential integrity.
 
 **Retrieve Authors and Their Books:** This endpoint lists all authors in the database along with the titles of their books, providing a structured response suitable for both displaying and filtering books by author.
 
