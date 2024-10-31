@@ -142,7 +142,7 @@ Response:
   }
   ```
 
-## Read Authors
+## 4. Read Authors
 
 Retrieves a list of authors. Requires a valid token in the Authorization header.
 
@@ -177,7 +177,7 @@ Response:
   }
   ```
 
-## Update Author
+## 5. Update Author
 
 Updates an author's details by authorid. Requires a valid token.
 
@@ -188,7 +188,7 @@ Updates an author's details by authorid. Requires a valid token.
   {
     "authorid": 1,
     "name": "Updated Author Name",
-    "token": "valid_token"
+    "token": "valid_jwt_token"
   }
 
 Response:
@@ -214,7 +214,7 @@ Response:
   {
     "status": "fail",
     "data": {
-      "title": "Author already exists"
+      "title": "Author name already in use by another author"
     }
   }
   ```
@@ -227,6 +227,46 @@ Response:
   }
   ```
 
+## 6. Delete Author
+
+Deletes an author by authorid. Requires a valid token.
+
+- **Endpoint:** `/user/author/delete`
+- **Method:** `DELETE`
+- **Request Body:**
+  ```json
+  {
+    "authorid": 1,
+    "token": "valid_jwt_token"
+  }
+
+Response:
+
+- Success
+  ```json
+  {
+    "status": "success",
+    "token": "new_jwt_token"
+    "data": null
+  }
+  ```
+- Fail
+  ```json
+  {
+    "status": "fail",
+    "data": {
+      "title": "Invalid Token"
+    }
+  }
+  ```
+  ```json
+  {
+    "status": "fail",
+    "data": {
+      "title": "Author does not exist"
+    }
+  }
+  ```
 
 
 
