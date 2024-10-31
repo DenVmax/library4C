@@ -39,24 +39,24 @@ Registers a new user by providing a username and password.
     "password": "user_password"
   }
   
-Response
+Response:
 
-Success
+- Success
   ```json
   {
     "status": "success",
     "data": null
   }
   ```
-  Failure
-      ```json
-            {
-              "status": "fail",
-              "data": {
-                        "title": "Username already taken"
-                      }
+- Failure
+  ```json
+  {
+    "status": "fail",
+    "data": {
+      "title": "Username already taken"
             }
-        ```
+  }
+  ```
 
 
 
