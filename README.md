@@ -150,7 +150,7 @@ Retrieves a list of authors. Requires a valid token in the Authorization header.
 - **Method:** `GET`
 - **Headers:**
   ```plaintext
-  Authorization: Token valid_token
+  Authorization:     Token eyJ0eXAiOiJ....(valid_jwt_token)
 
 Response:
 
