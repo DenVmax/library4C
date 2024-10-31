@@ -58,6 +58,38 @@ Response:
   }
   ```
 
+## User Authentication
+
+Authenticates a user and generates a JWT.
+
+- **Endpoint:** `/user/auth`
+- **Method:** `POST`
+- **Request Body:**
+  ```json
+  {
+    "username": "existing_user",
+    "password": "user_password"
+  }
+  
+Response:
+
+- Success
+  ```json
+  {
+    "status": "success",
+    "token": "jwt token"
+    "data": null
+  }
+  ```
+- Failure
+  ```json
+  {
+    "status": "fail",
+    "data": {
+      "title": "Authentication Failed"
+            }
+  }
+  ```
 
 
 
