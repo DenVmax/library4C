@@ -77,7 +77,7 @@ Response:
   ```json
   {
     "status": "success",
-    "token": "jwt token"
+    "token": "jwt_token"
     "data": null
   }
   ```
@@ -91,7 +91,56 @@ Response:
   }
   ```
 
+## Endpoints for Author Management
 
+### Create Author
+
+Creates a new author entry. Requires a valid one-time-use token.
+
+- **Endpoint:** `/user/author/create`
+- **Method:** `POST`
+- **Request Body:**
+  ```json
+  {
+    "name": "Author Name",
+    "token": "valid_jwt_token"
+  }
+
+Response:
+
+- Success
+  ```json
+  {
+    "status": "success",
+    "token": "new_jwt_token"
+    "data": null
+  }
+  ```
+- Failure
+  ```json
+  {
+    "status": "fail",
+    "data": {
+      "title": "Invalid Token"
+            }
+  }
+  ```
+  ```json
+  {
+    "status": "fail",
+    "data": {
+      "title": "Author already exists"
+            }
+  }
+  ```
+  ```json
+  {
+    "status": "fail",
+    "data": {
+      "title": "Author name cannot be blank"
+            }
+  }
+  ```
 
 
 
