@@ -142,7 +142,7 @@ Response:
   }
   ```
 
-## 4. Read Authors
+### 4. Read Authors
 
 Retrieves a list of authors. Requires a valid token in the Authorization header.
 
@@ -177,7 +177,7 @@ Response:
   }
   ```
 
-## 5. Update Author
+### 5. Update Author
 
 Updates an author's details by authorid. Requires a valid token.
 
@@ -227,7 +227,7 @@ Response:
   }
   ```
 
-## 6. Delete Author
+### 6. Delete Author
 
 Deletes an author by authorid. Requires a valid token.
 
@@ -268,6 +268,65 @@ Response:
   }
   ```
 
+## Endpoints for Author Management
+
+### 7. Create Book
+
+Adds a new book to the library database The book title and author ID must be provided, and duplicates by the same author are prevented.
+
+- **Endpoint:** `/user/book/create`
+- **Method:** `POST`
+- **Request Body:**
+  ```json
+  {
+    "title": "Book Title",
+    "authorid": "Author ID",
+    "token": "valid_jwt_token"
+  }
+
+Response:
+
+- Success
+  ```json
+  {
+    "status": "success",
+    "token": "new_jwt_token"
+    "data": null
+  }
+  ```
+- Fail
+  ```json
+  {
+    "status": "fail",
+    "data": {
+      "title": "Invalid Token"
+    }
+  }
+  ```
+  ```json
+  {
+    "status": "fail",
+    "data": {
+      "title": "Title and Author ID cannot be blank"
+    }
+  }
+  ```
+   ```json
+  {
+    "status": "fail",
+    "data": {
+      "title": "Author does not exist"
+    }
+  }
+  ```
+  ```json
+  {
+    "status": "fail",
+    "data": {
+      "title": "This book by the same author already exists"
+    }
+  }
+  ```
 
 
 
