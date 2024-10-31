@@ -39,26 +39,33 @@ Registers a new user by providing a username and password.
     "password": "user_password"
   }
   
-Message Response
-Success:
-  ```json
-  {
-    "status": "success",
-    "data": null
-  }
-  ```
-Failure:
-  ```json
-  {
-    "status": "fail",
-    "data": {
-      "title": "Username already taken"
-    }
-  }
-  ```
+Response
+- **Success:**
+      ```json
+            {
+              "status": "success",
+              "data": null
+            }
+      ```
+-**Failure:**
+      ```json
+            {
+              "status": "fail",
+              "data": {
+                        "title": "Username already taken"
+                      }
+            }
+        ```
 
 
-``Use `code` in your Markdown file.``	
+
+
+
+
+
+
+
+
 
 This API implements security and reliability measures, including:
 
