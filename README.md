@@ -6,9 +6,9 @@ PHP-based RESTful API provides CRUD (Create, Read, Update, Delete) operations fo
 
 **Secure Token-Based Authentication:** Each request is authenticated with a JSON Web Token (JWT), ensuring only authorized users can perform operations. Tokens are validated with each request and refreshed as necessary for session continuity.
 
-- **User Registration and Authentication**: Allows users to register and log in securely. Each request is authenticated with a JSON Web Token (JWT), which is validated with each request and refreshed as needed to maintain session continuity.
+**User Registration and Authentication**: Allows users to register and log in securely. Each request is authenticated with a JSON Web Token (JWT), which is validated with each request and refreshed as needed to maintain session continuity.
   
-- **CRUD Operations for Authors**:
+**CRUD Operations for Authors**:
   - **Create Author**: Adds a new author to the catalog.
   - **Read Authors**: Retrieves a list of all authors, enabling clients to display and filter the author list.
   - **Update Author**: Allows modification of an author’s name.
