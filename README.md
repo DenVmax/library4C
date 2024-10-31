@@ -40,14 +40,14 @@ Registers a new user by providing a username and password.
   }
   
 Response
-- **Success:**
+  Success:
       ```json
             {
               "status": "success",
               "data": null
             }
       ```
--**Failure:**
+  Failure:
       ```json
             {
               "status": "fail",
