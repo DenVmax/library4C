@@ -434,7 +434,7 @@ Deletes a book from the library catalog. It removes the book’s references from
     "token": "valid_jwt_token"
   }
 
-  Response:
+Response:
 
 - Success
   ```json
