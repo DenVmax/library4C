@@ -327,7 +327,41 @@ Response:
     }
   }
   ```
+## Read Books
 
+Retrieves a list of all books in the library.
+
+- **Endpoint:** `/user/book/read`
+- **Method:** `GET`
+- **Headers:**
+  ```plaintext
+  Authorization:     Token eyJ0pXAsOiJ....(valid_jwt_token)
+
+Response:
+
+- Success
+  ```json
+  {
+    "status": "success",
+    "token": "new_jwt_token"
+    "data": [
+      {
+        "bookid": 21,
+        "title": "Soldier, Poet, King",
+        "authorid": 1
+      }
+    ]
+  }
+  ```
+- Fail
+  ```json
+  {
+    "status": "fail",
+    "data": {
+      "title": "Invalid Token"
+    }
+  }
+  ```
 
 
 
